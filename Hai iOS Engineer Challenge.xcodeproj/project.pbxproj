@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		A12EBB321F43AE3B00002ADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB311F43AE3B00002ADE /* AppDelegate.swift */; };
 		A12EBB341F43AE3B00002ADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB331F43AE3B00002ADE /* ViewController.swift */; };
-		A12EBB371F43AE3B00002ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB351F43AE3B00002ADE /* Main.storyboard */; };
 		A12EBB391F43AE3B00002ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB381F43AE3B00002ADE /* Assets.xcassets */; };
 		A12EBB3C1F43AE3B00002ADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */; };
+		A12EBB441F43AEE500002ADE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB431F43AEE500002ADE /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A12EBB2E1F43AE3B00002ADE /* Hai iOS Engineer Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hai iOS Engineer Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12EBB311F43AE3B00002ADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A12EBB331F43AE3B00002ADE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A12EBB361F43AE3B00002ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A12EBB381F43AE3B00002ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A12EBB3B1F43AE3B00002ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A12EBB3D1F43AE3B00002ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12EBB431F43AEE500002ADE /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +55,45 @@
 			isa = PBXGroup;
 			children = (
 				A12EBB311F43AE3B00002ADE /* AppDelegate.swift */,
-				A12EBB331F43AE3B00002ADE /* ViewController.swift */,
-				A12EBB351F43AE3B00002ADE /* Main.storyboard */,
-				A12EBB381F43AE3B00002ADE /* Assets.xcassets */,
-				A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */,
-				A12EBB3D1F43AE3B00002ADE /* Info.plist */,
+				A12EBB461F43AEED00002ADE /* View */,
+				A12EBB471F43AEF700002ADE /* Includes */,
+				A12EBB451F43AEE900002ADE /* Model */,
 			);
 			path = "Hai iOS Engineer Challenge";
+			sourceTree = "<group>";
+		};
+		A12EBB451F43AEE900002ADE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A12EBB431F43AEE500002ADE /* Theme.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A12EBB461F43AEED00002ADE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A12EBB481F43AF0100002ADE /* LaunchScreen */,
+				A12EBB331F43AE3B00002ADE /* ViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A12EBB471F43AEF700002ADE /* Includes */ = {
+			isa = PBXGroup;
+			children = (
+				A12EBB381F43AE3B00002ADE /* Assets.xcassets */,
+				A12EBB3D1F43AE3B00002ADE /* Info.plist */,
+			);
+			name = Includes;
+			sourceTree = "<group>";
+		};
+		A12EBB481F43AF0100002ADE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +158,6 @@
 			files = (
 				A12EBB3C1F43AE3B00002ADE /* LaunchScreen.storyboard in Resources */,
 				A12EBB391F43AE3B00002ADE /* Assets.xcassets in Resources */,
-				A12EBB371F43AE3B00002ADE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12EBB441F43AEE500002ADE /* Theme.swift in Sources */,
 				A12EBB341F43AE3B00002ADE /* ViewController.swift in Sources */,
 				A12EBB321F43AE3B00002ADE /* AppDelegate.swift in Sources */,
 			);
@@ -145,14 +177,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A12EBB351F43AE3B00002ADE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A12EBB361F43AE3B00002ADE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
