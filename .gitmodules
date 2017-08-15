@@ -4,3 +4,6 @@
 [submodule "Carthage/Checkouts/SVNiOSBootstraper"]
 	path = Carthage/Checkouts/SVNiOSBootstraper
 	url = https://github.com/sevenapps/SVNiOSBootstraper.git
+[submodule "Carthage/Checkouts/Alamofire"]
+	path = Carthage/Checkouts/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
