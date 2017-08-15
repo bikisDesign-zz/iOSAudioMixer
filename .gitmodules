@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/Swift-Essentials"]
+	path = Carthage/Checkouts/Swift-Essentials
+	url = https://github.com/bikisDesign/Swift-Essentials.git
+[submodule "Carthage/Checkouts/SVNiOSBootstraper"]
+	path = Carthage/Checkouts/SVNiOSBootstraper
+	url = https://github.com/sevenapps/SVNiOSBootstraper.git

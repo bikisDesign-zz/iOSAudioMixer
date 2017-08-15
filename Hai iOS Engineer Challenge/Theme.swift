@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVNBootstraper
 
 struct Theme {
   
@@ -40,9 +41,23 @@ struct Theme {
     case subtitle
     case body
     case detail
+    
+    var font: UIFont {
+      switch self {
+      case .title:
+        return UIFont(name: CustomFont.titlliumReg, size: 22)!
+      case .subtitle:
+        return UIFont(name: CustomFont.robotoMed, size: 18)!
+      case .body:
+        return UIFont(name: CustomFont.titlliumReg, size: 16)!
+      case .detail:
+        return UIFont(name: CustomFont.robotoThin, size: 14)!
+      }
+    }
   }
   
-  enum CellHeight {
+  
+  enum CellHeight { // the height of a cell based on device
     case large
     case medium
     case small
@@ -67,4 +82,13 @@ struct Theme {
       }
     }
   }
+}
+
+
+// Fonts by their name
+private struct CustomFont {
+  static let robotoMed: String =  "Roboto-Medium"
+  static let robotoThin: String = "Roboto-Thin"
+  static let titlliumLight: String = "TitilliumWeb-ExtraLight"
+  static let titlliumReg: String = "TitilliumWeb-Regular"
 }
