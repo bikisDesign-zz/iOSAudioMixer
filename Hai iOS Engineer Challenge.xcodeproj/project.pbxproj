@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A12EBB321F43AE3B00002ADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB311F43AE3B00002ADE /* AppDelegate.swift */; };
+		A12EBB341F43AE3B00002ADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB331F43AE3B00002ADE /* ViewController.swift */; };
+		A12EBB371F43AE3B00002ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB351F43AE3B00002ADE /* Main.storyboard */; };
+		A12EBB391F43AE3B00002ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB381F43AE3B00002ADE /* Assets.xcassets */; };
+		A12EBB3C1F43AE3B00002ADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A12EBB2E1F43AE3B00002ADE /* Hai iOS Engineer Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hai iOS Engineer Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12EBB311F43AE3B00002ADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A12EBB331F43AE3B00002ADE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A12EBB361F43AE3B00002ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A12EBB381F43AE3B00002ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A12EBB3B1F43AE3B00002ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A12EBB3D1F43AE3B00002ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A12EBB2B1F43AE3B00002ADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A12EBB251F43AE3B00002ADE = {
+			isa = PBXGroup;
+			children = (
+				A12EBB301F43AE3B00002ADE /* Hai iOS Engineer Challenge */,
+				A12EBB2F1F43AE3B00002ADE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A12EBB2F1F43AE3B00002ADE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A12EBB2E1F43AE3B00002ADE /* Hai iOS Engineer Challenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A12EBB301F43AE3B00002ADE /* Hai iOS Engineer Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				A12EBB311F43AE3B00002ADE /* AppDelegate.swift */,
+				A12EBB331F43AE3B00002ADE /* ViewController.swift */,
+				A12EBB351F43AE3B00002ADE /* Main.storyboard */,
+				A12EBB381F43AE3B00002ADE /* Assets.xcassets */,
+				A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */,
+				A12EBB3D1F43AE3B00002ADE /* Info.plist */,
+			);
+			path = "Hai iOS Engineer Challenge";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A12EBB2D1F43AE3B00002ADE /* Hai iOS Engineer Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A12EBB401F43AE3B00002ADE /* Build configuration list for PBXNativeTarget "Hai iOS Engineer Challenge" */;
+			buildPhases = (
+				A12EBB2A1F43AE3B00002ADE /* Sources */,
+				A12EBB2B1F43AE3B00002ADE /* Frameworks */,
+				A12EBB2C1F43AE3B00002ADE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hai iOS Engineer Challenge";
+			productName = "Hai iOS Engineer Challenge";
+			productReference = A12EBB2E1F43AE3B00002ADE /* Hai iOS Engineer Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A12EBB261F43AE3B00002ADE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = bikisDesign;
+				TargetAttributes = {
+					A12EBB2D1F43AE3B00002ADE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = C4P8U7398K;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A12EBB291F43AE3B00002ADE /* Build configuration list for PBXProject "Hai iOS Engineer Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A12EBB251F43AE3B00002ADE;
+			productRefGroup = A12EBB2F1F43AE3B00002ADE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A12EBB2D1F43AE3B00002ADE /* Hai iOS Engineer Challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A12EBB2C1F43AE3B00002ADE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12EBB3C1F43AE3B00002ADE /* LaunchScreen.storyboard in Resources */,
+				A12EBB391F43AE3B00002ADE /* Assets.xcassets in Resources */,
+				A12EBB371F43AE3B00002ADE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A12EBB2A1F43AE3B00002ADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12EBB341F43AE3B00002ADE /* ViewController.swift in Sources */,
+				A12EBB321F43AE3B00002ADE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A12EBB351F43AE3B00002ADE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A12EBB361F43AE3B00002ADE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A12EBB3A1F43AE3B00002ADE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A12EBB3B1F43AE3B00002ADE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A12EBB3E1F43AE3B00002ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A12EBB3F1F43AE3B00002ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A12EBB411F43AE3B00002ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C4P8U7398K;
+				INFOPLIST_FILE = "Hai iOS Engineer Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bikisDesign.Hai-iOS-Engineer-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A12EBB421F43AE3B00002ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C4P8U7398K;
+				INFOPLIST_FILE = "Hai iOS Engineer Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bikisDesign.Hai-iOS-Engineer-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A12EBB291F43AE3B00002ADE /* Build configuration list for PBXProject "Hai iOS Engineer Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A12EBB3E1F43AE3B00002ADE /* Debug */,
+				A12EBB3F1F43AE3B00002ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A12EBB401F43AE3B00002ADE /* Build configuration list for PBXNativeTarget "Hai iOS Engineer Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A12EBB411F43AE3B00002ADE /* Debug */,
+				A12EBB421F43AE3B00002ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A12EBB261F43AE3B00002ADE /* Project object */;
+}
