@@ -30,6 +30,10 @@
 		A12EBB7E1F44B73B00002ADE /* ArtistMetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB7D1F44B73B00002ADE /* ArtistMetaView.swift */; };
 		A12EBB801F44BF8500002ADE /* SVNShapesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12EBB7F1F44BF8500002ADE /* SVNShapesManager.framework */; };
 		A12EBB821F44C31C00002ADE /* PlaybackDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB811F44C31C00002ADE /* PlaybackDeck.swift */; };
+		A12EBB841F44CA4500002ADE /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB831F44CA4500002ADE /* Mixer.swift */; };
+		A12EBB861F44CC2400002ADE /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB851F44CC2400002ADE /* Alerts.swift */; };
+		A12EBB881F44CD3F00002ADE /* ActivityIndicatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB871F44CD3F00002ADE /* ActivityIndicatable.swift */; };
+		A12EBB8A1F44CD6800002ADE /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB891F44CD6800002ADE /* ActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		A12EBB7D1F44B73B00002ADE /* ArtistMetaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistMetaView.swift; sourceTree = "<group>"; };
 		A12EBB7F1F44BF8500002ADE /* SVNShapesManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVNShapesManager.framework; path = Carthage/Build/iOS/SVNShapesManager.framework; sourceTree = "<group>"; };
 		A12EBB811F44C31C00002ADE /* PlaybackDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackDeck.swift; sourceTree = "<group>"; };
+		A12EBB831F44CA4500002ADE /* Mixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
+		A12EBB851F44CC2400002ADE /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		A12EBB871F44CD3F00002ADE /* ActivityIndicatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatable.swift; sourceTree = "<group>"; };
+		A12EBB891F44CD6800002ADE /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		A12EBB451F43AEE900002ADE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB831F44CA4500002ADE /* Mixer.swift */,
 				A12EBB691F43B87500002ADE /* SearchResults.swift */,
 				A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */,
 				A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */,
@@ -120,6 +129,7 @@
 		A12EBB461F43AEED00002ADE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB891F44CD6800002ADE /* ActivityIndicatorView.swift */,
 				A12EBB7D1F44B73B00002ADE /* ArtistMetaView.swift */,
 				A12EBB811F44C31C00002ADE /* PlaybackDeck.swift */,
 				A12EBB661F43B63700002ADE /* UITableViewCell */,
@@ -131,8 +141,8 @@
 		A12EBB471F43AEF700002ADE /* Includes */ = {
 			isa = PBXGroup;
 			children = (
-				A12EBB571F43B23B00002ADE /* Fonts */,
 				A12EBB381F43AE3B00002ADE /* Assets.xcassets */,
+				A12EBB571F43B23B00002ADE /* Fonts */,
 				A12EBB3D1F43AE3B00002ADE /* Info.plist */,
 			);
 			name = Includes;
@@ -173,6 +183,8 @@
 		A12EBB5C1F43B45F00002ADE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB871F44CD3F00002ADE /* ActivityIndicatable.swift */,
+				A12EBB851F44CC2400002ADE /* Alerts.swift */,
 				A12EBB431F43AEE500002ADE /* Theme.swift */,
 			);
 			name = ViewModel;
@@ -311,6 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A12EBB721F43CCBF00002ADE /* SearchResultsDataSource.swift in Sources */,
+				A12EBB881F44CD3F00002ADE /* ActivityIndicatable.swift in Sources */,
+				A12EBB861F44CC2400002ADE /* Alerts.swift in Sources */,
+				A12EBB841F44CA4500002ADE /* Mixer.swift in Sources */,
 				A12EBB621F43B5D400002ADE /* MusicSearchVC.swift in Sources */,
 				A12EBB591F43B43A00002ADE /* Dependencies.swift in Sources */,
 				A12EBB651F43B63400002ADE /* ResultsMetaTableViewCell.swift in Sources */,
@@ -323,6 +338,7 @@
 				A12EBB321F43AE3B00002ADE /* AppDelegate.swift in Sources */,
 				A12EBB5B1F43B45B00002ADE /* ApplicationCoordinator.swift in Sources */,
 				A12EBB7C1F43E89200002ADE /* MusicPreviewVC.swift in Sources */,
+				A12EBB8A1F44CD6800002ADE /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

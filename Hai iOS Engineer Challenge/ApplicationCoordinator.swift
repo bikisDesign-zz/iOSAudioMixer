@@ -39,19 +39,41 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
   }
   
   func pushToPreview(withData data: SearchMeta) {
-  
+    
     let vc = MusicPreviewViewController(result: data)
     rootViewController.viewControllers.first?.present(vc, animated: true, completion: {
+      
+      if let track = data.previewURL,
+        let url = URL(string: track) {
+        guard url.pathExtension !=  "m4v" else {
+          vc.shouldPlayTrack = false
+          return }
+        self.downloadFile(url: url, callback: { (trackData) in
+          
+          DispatchQueue.main.async {
+            
+            guard let downloadedTrack = trackData else {
+              vc.show(alertWithType: Alerts.issueDownloadingTrack, withCompletionHandler: nil)
+              return
+            }
+            
+            vc.downloadedTrack = downloadedTrack
+          }
+        })
+      }
       
       guard let artwork = data.artworkURL else { return } // if there isn't artwork then leave it blank
       guard let url = URL(string: artwork) else { return }
       
-      self.downloadImage(url: url, callback: { (imageData) in
-        guard let data = imageData else {
-          // alert user
-          return }
-          DispatchQueue.main.async {
-            vc.artistPreview.artworkImageView.image = UIImage(data: data)
+      self.downloadFile(url: url, callback: { (imageData) in
+        
+        DispatchQueue.main.async {
+          
+          guard let data = imageData else { // error with download
+            vc.show(alertWithType: Alerts.issueDownloadingImage, withCompletionHandler: nil)
+            return }
+          
+          vc.downloadedImage = UIImage(data: data)
         }
       })
     })
@@ -59,10 +81,12 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
   
   
   
-  private func downloadImage(url: URL, callback: @escaping ((Data?) -> Void)) {
+  private func downloadFile(url: URL, callback: @escaping ((Data?) -> Void)) {
     print("Download Started")
+    print(url)
     getDataFromUrl(url: url) { (data, response, error)  in
       guard let data = data, error == nil else {
+        print(error?.localizedDescription)
         callback(nil)
         return }
       print(response?.suggestedFilename ?? url.lastPathComponent)

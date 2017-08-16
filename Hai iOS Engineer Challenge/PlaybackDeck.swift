@@ -26,11 +26,11 @@ class PlaybackDeckView: UIView {
     }
   }
   
-  private lazy var volumeDown: UIImageView = self.imageViewFactory(#imageLiteral(resourceName: "substract"))
+  lazy var volumeDown: UIImageView = self.imageViewFactory(#imageLiteral(resourceName: "substract"))
   
   private lazy var play: UIImageView = self.imageViewFactory(#imageLiteral(resourceName: "playback"))
   
-  private lazy var volumeUp: UIImageView = self.imageViewFactory(#imageLiteral(resourceName: "add"))
+  lazy var volumeUp: UIImageView = self.imageViewFactory(#imageLiteral(resourceName: "add"))
   
   private lazy var downButton: UIButton = self.buttonFactory()
   
@@ -40,7 +40,7 @@ class PlaybackDeckView: UIView {
   
   
   private func imageViewFactory(_ image: UIImage) -> UIImageView {
-    let iv = UIImageView(image: image)
+    let iv = UIImageView(image: image.withRenderingMode(.alwaysTemplate))
     iv.contentMode = .scaleAspectFit
     iv.isUserInteractionEnabled = true
     addSubview(iv)
