@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias SearchResults = [SearchResult]
+typealias SearchResults = [SearchMeta]
 
 protocol SearchResult {
   var artist: String { get set }

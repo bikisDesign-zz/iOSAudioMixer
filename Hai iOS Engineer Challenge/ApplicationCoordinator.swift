@@ -25,7 +25,7 @@ final class ApplicationCoordinator:  Coordinator<UINavigationController>, Depend
   override func start(with completion: @escaping (Coordinator<UINavigationController>) -> Void) {
     
     dependencies = AppDependency(requestManagerDelegate: self)
-   let musicSearchVC = MusicSearchViewController()
+    let musicSearchVC = MusicSearchViewController()
     musicSearchVC.delegate = self
     rootViewController.show(musicSearchVC, sender: self)
     super.start(with: completion)
@@ -38,8 +38,43 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
     dependencies?.requestManager.search(for: text)
   }
   
-  func pushToPreview(withData: SearchResult) {
-    let vc = 
+  func pushToPreview(withData data: SearchMeta) {
+    guard let artwork = data.artworkURL else { return }
+    guard let url = URL(string: artwork) else { return }
+    
+    downloadImage(url: url, callback: { (imageData) in
+      guard let data = imageData else {
+        // alert user
+        return }
+      if let vc = self.rootViewController.viewControllers.last as? MusicPreviewViewController {
+        DispatchQueue.main.async {
+          vc.artistPreview.artworkImageView.image = UIImage(data: data)
+        }
+      }
+    })
+    let vc = MusicPreviewViewController(result: data)
+    rootViewController.show(vc, sender: self)
+  }
+  
+  
+  
+  private func downloadImage(url: URL, callback: @escaping ((Data?) -> Void)) {
+    print("Download Started")
+    getDataFromUrl(url: url) { (data, response, error)  in
+      guard let data = data, error == nil else {
+        callback(nil)
+        return }
+      print(response?.suggestedFilename ?? url.lastPathComponent)
+      print("Download Finished")
+      callback(data)
+    }
+  }
+  
+  private func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+    URLSession.shared.dataTask(with: url) {
+      (data, response, error) in
+      completion(data, response, error)
+      }.resume()
   }
 }
 

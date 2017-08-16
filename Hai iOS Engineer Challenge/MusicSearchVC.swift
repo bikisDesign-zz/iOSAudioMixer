@@ -11,7 +11,7 @@ import SVNBootstraper
 
 protocol MusicSearchViewControllerDelegate: class {
   func performSearch(with text: String)
-  func pushToPreview(withData: SearchResult)
+  func pushToPreview(withData data: SearchMeta)
 }
 
 final class MusicSearchViewController: CoordinatableViewController, KeyboardNotifiable {
@@ -50,6 +50,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: true)
     registerForKeyboardNotifications(with: #selector(keyboardWillShowOrHide(_:)))
   }
   
@@ -95,6 +96,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
 
 extension MusicSearchViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    navigationController?.setNavigationBarHidden(false, animated: true)
     delegate?.pushToPreview(withData: dataSource.results[indexPath.row])
   }
 }
