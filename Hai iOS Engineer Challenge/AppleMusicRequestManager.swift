@@ -33,7 +33,7 @@ class AppleMusicRequestManager: NSObject {
     guard let url = URL(string: fullSearchURL) else { return }
     Alamofire.request(url).responseJSON { (response) in
       if response.error != nil {
-        print(response.error)
+        print(response.error!.localizedDescription)
       }
       
       guard let json = response.result.value as? JSON else { return }

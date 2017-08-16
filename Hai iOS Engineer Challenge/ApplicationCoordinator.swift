@@ -50,6 +50,7 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
           DispatchQueue.main.async {
             
             guard let downloadedTrack = trackData else {
+              vc.hideActivityIndicator()
               vc.show(alertWithType: Alerts.issueDownloadingTrack, withCompletionHandler: nil)
               return
             }
@@ -67,6 +68,9 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
         DispatchQueue.main.async {
           
           guard let data = imageData else { // error with download
+            if vc.downloadedTrack != nil {
+              vc.hideActivityIndicator()
+            }
             vc.show(alertWithType: Alerts.issueDownloadingImage, withCompletionHandler: nil)
             return }
           
