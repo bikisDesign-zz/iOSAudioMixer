@@ -41,6 +41,7 @@ class PlaybackDeckView: UIView {
   
   private func imageViewFactory(_ image: UIImage) -> UIImageView {
     let iv = UIImageView(image: image.withRenderingMode(.alwaysTemplate))
+    iv.tintColor = Theme.Colors.darkText.color
     iv.contentMode = .scaleAspectFit
     iv.isUserInteractionEnabled = true
     addSubview(iv)

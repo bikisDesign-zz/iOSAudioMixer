@@ -132,6 +132,7 @@ extension MusicPreviewViewController: PlaybackDeckViewDelegate {
   func onPlaybackTap(withItem item: PlaybackDeckView.Item) {
     guard downloadedTrack != nil else { return }
     switch item {
+      
     case .playback:
       if playbackDeck.isPlaying {
         playbackDeck.isPlaying = !mixer.stopPlayback()
@@ -139,10 +140,14 @@ extension MusicPreviewViewController: PlaybackDeckViewDelegate {
       } else {
         playbackDeck.isPlaying = mixer.startPlayback()
       }
+      
     case .volumeDown:
-      playbackDeck.volumeDown.tintColor = !mixer.setVolume(up: true) ? Theme.Colors.lightText.color : UIColor.clear
+      playbackDeck.volumeUp.tintColor = Theme.Colors.darkText.color
+      playbackDeck.volumeDown.tintColor = mixer.setVolume(up: false) ? Theme.Colors.darkText.color : UIColor.lightGray
+      
     case .volumeUp:
-      break
+      playbackDeck.volumeDown.tintColor = Theme.Colors.darkText.color
+      playbackDeck.volumeUp.tintColor = mixer.setVolume(up: true) ? Theme.Colors.darkText.color : UIColor.lightGray
     }
   }
 }

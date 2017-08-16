@@ -15,9 +15,7 @@ class ArtistMetaView: UIView {
   lazy var artworkImageView: UIImageView  = {
     let iv = UIImageView()
     iv.contentMode = .scaleAspectFit
-    iv.alpha = 0.8
-    iv.layer.borderColor = Theme.Colors.darkText.color.cgColor
-    iv.layer.borderWidth = 1.0
+    iv.alpha = 1.0
     self.addSubview(iv)
     return iv
   }()

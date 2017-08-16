@@ -26,7 +26,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
     let searchbar = UISearchBar()
     searchbar.delegate = self
     searchbar.searchBarStyle = UISearchBarStyle.minimal
-    searchbar.backgroundColor = Theme.Colors.primaryBackground.color
+    searchbar.backgroundColor = Theme.Colors.secondaryBackground.color
     self.view.addSubview(searchbar)
     return searchbar
   }()
@@ -37,7 +37,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
     tv.delegate = self
     tv.dataSource = self.dataSource
     tv.register(ResultsMetaTableViewCell.self)
-    tv.backgroundColor = Theme.Colors.primaryBackground.color
+    tv.backgroundColor = Theme.Colors.secondaryBackground.color
     self.view.addSubview(tv)
     return tv
   }()
@@ -45,7 +45,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = Theme.Colors.primaryBackground.color
+    view.backgroundColor = Theme.Colors.secondaryBackground.color
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +106,11 @@ extension MusicSearchViewController: UITableViewDelegate {
     navigationController?.setNavigationBarHidden(false, animated: true)
     delegate?.pushToPreview(withData: dataSource.results[indexPath.row])
   }
+  
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return Theme.CellHeight.medium.forDevice
+  }
 }
 
 
@@ -113,5 +118,11 @@ extension MusicSearchViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let searchText = searchBar.text else { return }
     delegate?.performSearch(with: searchText)
+  }
+  
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    if searchText.characters.count >= 4 {
+      delegate?.performSearch(with: searchText)
+    }
   }
 }

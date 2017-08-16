@@ -45,9 +45,6 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
       
       if let track = data.previewURL,
         let url = URL(string: track) {
-        guard url.pathExtension !=  "m4v" else {
-          vc.shouldPlayTrack = false
-          return }
         self.downloadFile(url: url, callback: { (trackData) in
           
           DispatchQueue.main.async {

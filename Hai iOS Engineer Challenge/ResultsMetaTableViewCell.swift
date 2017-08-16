@@ -40,6 +40,6 @@ class ResultsMetaTableViewCell: UITableViewCell, ReusableView {
   func set(title: String, subtitle: String){
     titleLabel.text = title
     subtitleLabel.text = subtitle
-    backgroundColor = Theme.Colors.tertiaryBackground.color
+    backgroundColor = Theme.Colors.primaryBackground.color
   }
 }

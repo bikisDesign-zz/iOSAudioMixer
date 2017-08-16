@@ -22,7 +22,7 @@ struct Theme {
     var color: UIColor {
       switch self {
       case .lightText:
-        return UIColor(r: 240, g: 244, b: 245)
+        return UIColor(r: 111, g: 147, b: 157)
       case .primaryBackground:
         return UIColor(r: 224, g: 251, b: 252)
       case .secondaryBackground:

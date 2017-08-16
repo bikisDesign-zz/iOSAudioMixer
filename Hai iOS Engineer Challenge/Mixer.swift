@@ -12,6 +12,7 @@ import AVFoundation
 final class Mixer: NSObject, AVAudioPlayerDelegate {
   
   private var player: AVAudioPlayer?
+  
   private lazy var audioSession: AVAudioSession = AVAudioSession.sharedInstance()
   
   enum MixerStatus {
@@ -28,6 +29,7 @@ final class Mixer: NSObject, AVAudioPlayerDelegate {
     super.init()
     do {
       try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with: AVAudioSessionCategoryOptions.defaultToSpeaker)
+      try audioSession.setActive(true)
     } catch {
       assertionFailure("couldn't set avaudioSessionCategory")
     }
@@ -71,15 +73,23 @@ final class Mixer: NSObject, AVAudioPlayerDelegate {
   /// if is at max or at min allowed volume it will return false
   /// otherwise will perform volume change and return true
   func setVolume(up isUP: Bool) -> Bool {
+    let volume = isUP ? player!.volume + volumeIncrement : player!.volume - volumeIncrement
+    
     if isUP {
-      guard player?.volume != maxVolume else { return false }
-      let volume = player!.volume + volumeIncrement
+      if volume > 1.0 {
+      player?.setVolume(1.0, fadeDuration: 0.25)
+      return false
+      }
+      
       player?.setVolume(volume, fadeDuration: 0.25)
       return true
     }
     
-    guard player?.volume != 0.0 else { return false }
-    let volume = player!.volume - volumeIncrement
+    if volume < 0.0 {
+      player?.setVolume(0.0, fadeDuration: 0.25)
+      return false
+    }
+    
     player?.setVolume(volume, fadeDuration: 0.25)
     return true
   }
