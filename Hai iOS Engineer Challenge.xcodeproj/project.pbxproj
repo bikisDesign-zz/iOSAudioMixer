@@ -28,6 +28,8 @@
 		A12EBB721F43CCBF00002ADE /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */; };
 		A12EBB7C1F43E89200002ADE /* MusicPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB7B1F43E89200002ADE /* MusicPreviewVC.swift */; };
 		A12EBB7E1F44B73B00002ADE /* ArtistMetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB7D1F44B73B00002ADE /* ArtistMetaView.swift */; };
+		A12EBB801F44BF8500002ADE /* SVNShapesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12EBB7F1F44BF8500002ADE /* SVNShapesManager.framework */; };
+		A12EBB821F44C31C00002ADE /* PlaybackDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB811F44C31C00002ADE /* PlaybackDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +51,13 @@
 		A12EBB611F43B5D400002ADE /* MusicSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicSearchVC.swift; sourceTree = "<group>"; };
 		A12EBB641F43B63400002ADE /* ResultsMetaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsMetaTableViewCell.swift; sourceTree = "<group>"; };
 		A12EBB691F43B87500002ADE /* SearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
-		A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleMusicRequestManager.swift; path = ../AppleMusicRequestManager.swift; sourceTree = "<group>"; };
+		A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMusicRequestManager.swift; sourceTree = "<group>"; };
 		A12EBB6F1F43C42B00002ADE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
 		A12EBB7B1F43E89200002ADE /* MusicPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPreviewVC.swift; sourceTree = "<group>"; };
 		A12EBB7D1F44B73B00002ADE /* ArtistMetaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistMetaView.swift; sourceTree = "<group>"; };
+		A12EBB7F1F44BF8500002ADE /* SVNShapesManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVNShapesManager.framework; path = Carthage/Build/iOS/SVNShapesManager.framework; sourceTree = "<group>"; };
+		A12EBB811F44C31C00002ADE /* PlaybackDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12EBB801F44BF8500002ADE /* SVNShapesManager.framework in Frameworks */,
 				A12EBB4C1F43B05600002ADE /* SVNBootstraper.framework in Frameworks */,
 				A12EBB4D1F43B05600002ADE /* SwiftEssentials.framework in Frameworks */,
 				A12EBB701F43C42B00002ADE /* Alamofire.framework in Frameworks */,
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A12EBB7D1F44B73B00002ADE /* ArtistMetaView.swift */,
+				A12EBB811F44C31C00002ADE /* PlaybackDeck.swift */,
 				A12EBB661F43B63700002ADE /* UITableViewCell */,
 				A12EBB481F43AF0100002ADE /* LaunchScreen */,
 			);
@@ -144,6 +150,7 @@
 		A12EBB491F43B05600002ADE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB7F1F44BF8500002ADE /* SVNShapesManager.framework */,
 				A12EBB6F1F43C42B00002ADE /* Alamofire.framework */,
 				A12EBB4A1F43B05600002ADE /* SVNBootstraper.framework */,
 				A12EBB4B1F43B05600002ADE /* SwiftEssentials.framework */,
@@ -287,6 +294,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SVNBootstraper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftEssentials.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVNShapesManager.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -308,6 +316,7 @@
 				A12EBB651F43B63400002ADE /* ResultsMetaTableViewCell.swift in Sources */,
 				A12EBB7E1F44B73B00002ADE /* ArtistMetaView.swift in Sources */,
 				A12EBB441F43AEE500002ADE /* Theme.swift in Sources */,
+				A12EBB821F44C31C00002ADE /* PlaybackDeck.swift in Sources */,
 				A12EBB6E1F43BFF900002ADE /* AppleMusicRequestManager.swift in Sources */,
 				A12EBB6A1F43B87500002ADE /* SearchResults.swift in Sources */,
 				A12EBB5F1F43B59000002ADE /* Coordinatable.swift in Sources */,

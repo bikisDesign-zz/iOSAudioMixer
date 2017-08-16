@@ -54,6 +54,13 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
     registerForKeyboardNotifications(with: #selector(keyboardWillShowOrHide(_:)))
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    if let selectedRow = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedRow, animated: true)
+    }
+  }
+  
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)

@@ -67,7 +67,7 @@ class ArtistMetaView: UIView {
   override func layoutSubviews() {
     let xpadding: CGFloat = 15
     let width = frame.width - xpadding * 2
-    
+  
     collectionLabel.frame = CGRect(x: xpadding, y: frame.height - 15,
                                    width: width, height: 15)
     
@@ -77,8 +77,9 @@ class ArtistMetaView: UIView {
     trackLabel.frame = CGRect(x: xpadding, y: artistLabel.frame.origin.y - 40,
                               width: width, height: 35)
     
-    let imageSize = trackLabel.frame.origin.y - 10
-    artworkImageView.frame = CGRect(x: frame.width / 2 - imageSize / 2, y: 0,
-                                    width: imageSize, height: imageSize)
+    if result.artworkURL != nil {
+      artworkImageView.frame = CGRect(x: frame.width / 2 - 50, y: trackLabel.frame.origin.y - 120,
+                                      width: 100, height: 100)
+    }
   }
 }

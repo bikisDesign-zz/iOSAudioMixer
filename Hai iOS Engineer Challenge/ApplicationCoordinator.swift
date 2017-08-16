@@ -39,21 +39,22 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
   }
   
   func pushToPreview(withData data: SearchMeta) {
-    guard let artwork = data.artworkURL else { return }
-    guard let url = URL(string: artwork) else { return }
-    
-    downloadImage(url: url, callback: { (imageData) in
-      guard let data = imageData else {
-        // alert user
-        return }
-      if let vc = self.rootViewController.viewControllers.last as? MusicPreviewViewController {
-        DispatchQueue.main.async {
-          vc.artistPreview.artworkImageView.image = UIImage(data: data)
-        }
-      }
-    })
+  
     let vc = MusicPreviewViewController(result: data)
-    rootViewController.show(vc, sender: self)
+    rootViewController.viewControllers.first?.present(vc, animated: true, completion: {
+      
+      guard let artwork = data.artworkURL else { return } // if there isn't artwork then leave it blank
+      guard let url = URL(string: artwork) else { return }
+      
+      self.downloadImage(url: url, callback: { (imageData) in
+        guard let data = imageData else {
+          // alert user
+          return }
+          DispatchQueue.main.async {
+            vc.artistPreview.artworkImageView.image = UIImage(data: data)
+        }
+      })
+    })
   }
   
   
