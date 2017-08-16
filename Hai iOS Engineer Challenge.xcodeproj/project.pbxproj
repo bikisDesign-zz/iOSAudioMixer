@@ -119,7 +119,6 @@
 			children = (
 				A12EBB831F44CA4500002ADE /* Mixer.swift */,
 				A12EBB691F43B87500002ADE /* SearchResults.swift */,
-				A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */,
 				A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */,
 				A12EBB581F43B43A00002ADE /* Dependencies.swift */,
 			);
@@ -183,6 +182,7 @@
 		A12EBB5C1F43B45F00002ADE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */,
 				A12EBB871F44CD3F00002ADE /* ActivityIndicatable.swift */,
 				A12EBB851F44CC2400002ADE /* Alerts.swift */,
 				A12EBB431F43AEE500002ADE /* Theme.swift */,

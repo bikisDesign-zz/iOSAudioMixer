@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A container to show an Artist's metaData
 class ArtistMetaView: UIView {
   
   var result: SearchMeta

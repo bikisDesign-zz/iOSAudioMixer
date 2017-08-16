@@ -9,21 +9,22 @@
 import Foundation
 import AVFoundation
 
+
 final class Mixer: NSObject, AVAudioPlayerDelegate {
   
   private var player: AVAudioPlayer?
   
-  private lazy var audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+  private lazy var audioSession: AVAudioSession = AVAudioSession.sharedInstance() // the shared audio session
   
-  enum MixerStatus {
+  enum MixerStatus { // the various states of the mixer
     case booting, readyToPlay, isPlaying
   }
   
-  private var maxVolume: Float = 1.0
+  private var maxVolume: Float = 1.0 // the maximum allowed volume
   
-  private var volumeIncrement: Float = 0.2
+  private var volumeIncrement: Float = 0.2 // the amount to increment the volume to
   
-  var status: MixerStatus = .booting
+  var status: MixerStatus = .booting // the current status of the mixer
   
   override init() {
     super.init()

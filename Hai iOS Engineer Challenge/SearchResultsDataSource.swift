@@ -9,7 +9,9 @@
 import SwiftEssentials
 import UIKit
 
+/// The viewModel for the MusicSearch tableview
 class SearchResultsDataSource: NSObject, UITableViewDataSource {
+  
   lazy var results: SearchResults = SearchResults()
   
   

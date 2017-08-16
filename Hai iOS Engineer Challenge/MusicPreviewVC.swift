@@ -10,7 +10,9 @@ import UIKit
 import SVNBootstraper
 import SVNShapesManager
 
-
+/// a ViewController for the display of an Artist's metaData 
+/// interacts with the mixer
+/// and provides ui for the user to alter the mixer
 class MusicPreviewViewController: CoordinatableViewController, Alertable, ActivityIndicatable {
   
   var result: SearchMeta

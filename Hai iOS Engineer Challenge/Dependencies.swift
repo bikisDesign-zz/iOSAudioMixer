@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import Alamofire
 
+/// The app's dependencies 
 class AppDependency: AppleMusicRequestable {
   
   var requestManager: AppleMusicRequestManager
@@ -18,11 +18,10 @@ class AppDependency: AppleMusicRequestable {
   }
 }
 
-
+/// The dependencies to be passed around
 protocol Dependable: class {
   var dependencies: AppDependency? { get set }
 }
-
 
 protocol AppleMusicRequestable: class {
   var requestManager: AppleMusicRequestManager { get set }

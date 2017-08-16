@@ -12,6 +12,7 @@ protocol PlaybackDeckViewDelegate: class {
   func onPlaybackTap(withItem item: PlaybackDeckView.Item)
 }
 
+/// The UI counterpart to the Mixer
 class PlaybackDeckView: UIView {
   
   weak var delegate: PlaybackDeckViewDelegate?

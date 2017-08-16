@@ -14,13 +14,14 @@ protocol MusicSearchViewControllerDelegate: class {
   func pushToPreview(withData data: SearchMeta)
 }
 
+/// The viewController to present results from a search and to search on
 final class MusicSearchViewController: CoordinatableViewController, KeyboardNotifiable {
   
   var delegate: MusicSearchViewControllerDelegate?
   
   lazy var dataSource: SearchResultsDataSource = SearchResultsDataSource()
   
-  var isAnimating = false
+  var isAnimating = false // if a keyboard is currently animating then this will be true
   
   private lazy var searchBar: UISearchBar = {
     let searchbar = UISearchBar()
@@ -48,11 +49,13 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
     view.backgroundColor = Theme.Colors.secondaryBackground.color
   }
   
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(true, animated: true)
     registerForKeyboardNotifications(with: #selector(keyboardWillShowOrHide(_:)))
   }
+  
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -101,6 +104,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
 }
 
 
+
 extension MusicSearchViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     navigationController?.setNavigationBarHidden(false, animated: true)
@@ -114,6 +118,7 @@ extension MusicSearchViewController: UITableViewDelegate {
 }
 
 
+
 extension MusicSearchViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let searchText = searchBar.text else { return }
@@ -121,7 +126,7 @@ extension MusicSearchViewController: UISearchBarDelegate {
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    if searchText.characters.count >= 4 {
+    if searchText.characters.count >= 4 { 
       delegate?.performSearch(with: searchText)
     }
   }

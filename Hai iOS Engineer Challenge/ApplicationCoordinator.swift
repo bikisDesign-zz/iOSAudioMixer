@@ -11,7 +11,7 @@ import UIKit
 
 final class ApplicationCoordinator:  Coordinator<UINavigationController>, Dependable {
   
-  var dependencies: AppDependency?
+  var dependencies: AppDependency? // in larger applications this can be passed around so that each coordinator has direct access to the app's dependencies
   
   override init(rootViewController: UINavigationController? = nil) {
     let nc: UINavigationController = rootViewController ?? UINavigationController()
@@ -25,9 +25,12 @@ final class ApplicationCoordinator:  Coordinator<UINavigationController>, Depend
   override func start(with completion: @escaping (Coordinator<UINavigationController>) -> Void) {
     
     dependencies = AppDependency(requestManagerDelegate: self)
+    
     let musicSearchVC = MusicSearchViewController()
     musicSearchVC.delegate = self
+    
     rootViewController.show(musicSearchVC, sender: self)
+    
     super.start(with: completion)
   }
 }
@@ -38,14 +41,14 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
     dependencies?.requestManager.search(for: text)
   }
   
+  
   func pushToPreview(withData data: SearchMeta) {
-    
     let vc = MusicPreviewViewController(result: data)
     rootViewController.viewControllers.first?.present(vc, animated: true, completion: {
       
       if let track = data.previewURL,
         let url = URL(string: track) {
-        self.downloadFile(url: url, callback: { (trackData) in
+        self.dependencies?.requestManager.downloadFile(url: url, callback: { (trackData) in
           
           DispatchQueue.main.async {
             
@@ -63,7 +66,7 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
       guard let artwork = data.artworkURL else { return } // if there isn't artwork then leave it blank
       guard let url = URL(string: artwork) else { return }
       
-      self.downloadFile(url: url, callback: { (imageData) in
+      self.dependencies?.requestManager.downloadFile(url: url, callback: { (imageData) in
         
         DispatchQueue.main.async {
           
@@ -78,29 +81,6 @@ extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
         }
       })
     })
-  }
-  
-  
-  
-  private func downloadFile(url: URL, callback: @escaping ((Data?) -> Void)) {
-    print("Download Started")
-    print(url)
-    getDataFromUrl(url: url) { (data, response, error)  in
-      guard let data = data, error == nil else {
-        print(error?.localizedDescription)
-        callback(nil)
-        return }
-      print(response?.suggestedFilename ?? url.lastPathComponent)
-      print("Download Finished")
-      callback(data)
-    }
-  }
-  
-  private func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-    URLSession.shared.dataTask(with: url) {
-      (data, response, error) in
-      completion(data, response, error)
-      }.resume()
   }
 }
 

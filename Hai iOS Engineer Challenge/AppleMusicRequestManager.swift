@@ -11,10 +11,13 @@ import Alamofire
 
 typealias JSON = [String: Any?]
 
+
 protocol AppleMusicRequestManagerDelegate: class {
   func requestManager(returned results: SearchResults)
 }
 
+
+/// A manager to handle Apple Api requests
 class AppleMusicRequestManager: NSObject {
   private static let appleApiSearchTerm: String = "https://itunes.apple.com/search?term"
   
@@ -52,5 +55,28 @@ class AppleMusicRequestManager: NSObject {
       
       self.delegate?.requestManager(returned: results)
     }
+  }
+  
+  
+  func downloadFile(url: URL, callback: @escaping ((Data?) -> Void)) { // we could use alamofire for this but i prefer URLSession.
+    print("Download Started")
+    
+    getDataFromUrl(url: url) { (data, response, error)  in
+      guard let data = data, error == nil else {
+        print(error?.localizedDescription ?? "")
+        callback(nil)
+        return }
+      
+      print("Download Finished")
+      callback(data)
+    }
+  }
+  
+  
+  private func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+    URLSession.shared.dataTask(with: url) {
+      (data, response, error) in
+      completion(data, response, error)
+      }.resume()
   }
 }

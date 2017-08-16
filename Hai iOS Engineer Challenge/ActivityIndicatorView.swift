@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// an overlay and activity indicator 
 class ActivityIndicator: UIView {
   
   lazy var activityIndicator: UIActivityIndicatorView = {
