@@ -13,10 +13,6 @@
 		A12EBB441F43AEE500002ADE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB431F43AEE500002ADE /* Theme.swift */; };
 		A12EBB4C1F43B05600002ADE /* SVNBootstraper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12EBB4A1F43B05600002ADE /* SVNBootstraper.framework */; };
 		A12EBB4D1F43B05600002ADE /* SwiftEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12EBB4B1F43B05600002ADE /* SwiftEssentials.framework */; };
-		A12EBB511F43B20900002ADE /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB4F1F43B20900002ADE /* TitilliumWeb-ExtraLight.ttf */; };
-		A12EBB521F43B20900002ADE /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB501F43B20900002ADE /* TitilliumWeb-Regular.ttf */; };
-		A12EBB551F43B21A00002ADE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB531F43B21A00002ADE /* Roboto-Medium.ttf */; };
-		A12EBB561F43B21A00002ADE /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB541F43B21A00002ADE /* Roboto-Thin.ttf */; };
 		A12EBB591F43B43A00002ADE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB581F43B43A00002ADE /* Dependencies.swift */; };
 		A12EBB5B1F43B45B00002ADE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB5A1F43B45B00002ADE /* ApplicationCoordinator.swift */; };
 		A12EBB5F1F43B59000002ADE /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB5E1F43B59000002ADE /* Coordinatable.swift */; };
@@ -34,6 +30,9 @@
 		A12EBB861F44CC2400002ADE /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB851F44CC2400002ADE /* Alerts.swift */; };
 		A12EBB881F44CD3F00002ADE /* ActivityIndicatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB871F44CD3F00002ADE /* ActivityIndicatable.swift */; };
 		A12EBB8A1F44CD6800002ADE /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB891F44CD6800002ADE /* ActivityIndicatorView.swift */; };
+		A12EBB981F44F88000002ADE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB951F44F88000002ADE /* Roboto-Medium.ttf */; };
+		A12EBB991F44F88000002ADE /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB961F44F88000002ADE /* TitilliumWeb-ExtraLight.ttf */; };
+		A12EBB9A1F44F88000002ADE /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A12EBB971F44F88000002ADE /* TitilliumWeb-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +44,6 @@
 		A12EBB431F43AEE500002ADE /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A12EBB4A1F43B05600002ADE /* SVNBootstraper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVNBootstraper.framework; path = ../RaspiMusicPlayer/Carthage/Build/iOS/SVNBootstraper.framework; sourceTree = "<group>"; };
 		A12EBB4B1F43B05600002ADE /* SwiftEssentials.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEssentials.framework; path = ../RaspiMusicPlayer/Carthage/Build/iOS/SwiftEssentials.framework; sourceTree = "<group>"; };
-		A12EBB4F1F43B20900002ADE /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TitilliumWeb-ExtraLight.ttf"; path = "../../../Downloads/Titillium_Web/TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
-		A12EBB501F43B20900002ADE /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TitilliumWeb-Regular.ttf"; path = "../../../Downloads/Titillium_Web/TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
-		A12EBB531F43B21A00002ADE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		A12EBB541F43B21A00002ADE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		A12EBB581F43B43A00002ADE /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		A12EBB5A1F43B45B00002ADE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		A12EBB5E1F43B59000002ADE /* Coordinatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
@@ -66,6 +61,9 @@
 		A12EBB851F44CC2400002ADE /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A12EBB871F44CD3F00002ADE /* ActivityIndicatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatable.swift; sourceTree = "<group>"; };
 		A12EBB891F44CD6800002ADE /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		A12EBB951F44F88000002ADE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "Hai iOS Engineer Challenge/Fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		A12EBB961F44F88000002ADE /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TitilliumWeb-ExtraLight.ttf"; path = "Hai iOS Engineer Challenge/Fonts/TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A12EBB971F44F88000002ADE /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TitilliumWeb-Regular.ttf"; path = "Hai iOS Engineer Challenge/Fonts/TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,10 +168,9 @@
 		A12EBB571F43B23B00002ADE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A12EBB531F43B21A00002ADE /* Roboto-Medium.ttf */,
-				A12EBB541F43B21A00002ADE /* Roboto-Thin.ttf */,
-				A12EBB4F1F43B20900002ADE /* TitilliumWeb-ExtraLight.ttf */,
-				A12EBB501F43B20900002ADE /* TitilliumWeb-Regular.ttf */,
+				A12EBB951F44F88000002ADE /* Roboto-Medium.ttf */,
+				A12EBB961F44F88000002ADE /* TitilliumWeb-ExtraLight.ttf */,
+				A12EBB971F44F88000002ADE /* TitilliumWeb-Regular.ttf */,
 			);
 			name = Fonts;
 			path = ..;
@@ -285,12 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12EBB551F43B21A00002ADE /* Roboto-Medium.ttf in Resources */,
+				A12EBB9A1F44F88000002ADE /* TitilliumWeb-Regular.ttf in Resources */,
 				A12EBB3C1F43AE3B00002ADE /* LaunchScreen.storyboard in Resources */,
-				A12EBB561F43B21A00002ADE /* Roboto-Thin.ttf in Resources */,
-				A12EBB511F43B20900002ADE /* TitilliumWeb-ExtraLight.ttf in Resources */,
-				A12EBB521F43B20900002ADE /* TitilliumWeb-Regular.ttf in Resources */,
 				A12EBB391F43AE3B00002ADE /* Assets.xcassets in Resources */,
+				A12EBB981F44F88000002ADE /* Roboto-Medium.ttf in Resources */,
+				A12EBB991F44F88000002ADE /* TitilliumWeb-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

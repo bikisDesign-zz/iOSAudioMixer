@@ -88,7 +88,6 @@ struct Theme {
 // Fonts by their name
 private struct CustomFont {
   static let robotoMed: String =  "Roboto-Medium"
-  static let robotoThin: String = "Roboto-Thin"
   static let titlliumLight: String = "TitilliumWeb-ExtraLight"
   static let titlliumReg: String = "TitilliumWeb-Regular"
 }
