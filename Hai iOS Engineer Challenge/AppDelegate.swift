@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window?.makeKeyAndVisible()
     applicationCoord.start { (nav) in
-      // handle api calls here
+      
     }
     return true
   }

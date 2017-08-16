@@ -39,19 +39,19 @@ struct Theme {
   enum Fonts {
     case title
     case subtitle
-    case body
-    case detail
+    case cellTitle
+    case cellDetail
     
     var font: UIFont {
       switch self {
       case .title:
         return UIFont(name: CustomFont.titlliumReg, size: 22)!
       case .subtitle:
-        return UIFont(name: CustomFont.robotoMed, size: 18)!
-      case .body:
+        return UIFont(name: CustomFont.robotoMed, size: 16)!
+      case .cellTitle:
         return UIFont(name: CustomFont.titlliumReg, size: 16)!
-      case .detail:
-        return UIFont(name: CustomFont.robotoThin, size: 14)!
+      case .cellDetail:
+        return UIFont(name: CustomFont.robotoMed, size: 12)!
       }
     }
   }

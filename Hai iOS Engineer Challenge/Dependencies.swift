@@ -7,13 +7,23 @@
 //
 
 import Foundation
+import Alamofire
 
-struct AppDependency {
-  init(){
+class AppDependency: AppleMusicRequestable {
+  
+  var requestManager: AppleMusicRequestManager
+  
+  init(requestManagerDelegate: AppleMusicRequestManagerDelegate){
+    self.requestManager = AppleMusicRequestManager(delegate: requestManagerDelegate)
   }
 }
 
 
 protocol Dependable: class {
   var dependencies: AppDependency? { get set }
+}
+
+
+protocol AppleMusicRequestable: class {
+  var requestManager: AppleMusicRequestManager { get set }
 }

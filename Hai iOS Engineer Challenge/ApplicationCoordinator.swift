@@ -24,13 +24,30 @@ final class ApplicationCoordinator:  Coordinator<UINavigationController>, Depend
   
   override func start(with completion: @escaping (Coordinator<UINavigationController>) -> Void) {
     
-    dependencies = AppDependency()
-    presentMenu()
+    dependencies = AppDependency(requestManagerDelegate: self)
+   let musicSearchVC = MusicSearchViewController()
+    musicSearchVC.delegate = self
+    rootViewController.show(musicSearchVC, sender: self)
     super.start(with: completion)
   }
+}
+
+
+extension ApplicationCoordinator: MusicSearchViewControllerDelegate {
+  func performSearch(with text: String) {
+    dependencies?.requestManager.search(for: text)
+  }
   
-  
-  private func presentMenu(){
-    rootViewController.show(MusicSearchViewController(), sender: self)
+  func pushToPreview(withData: SearchResult) {
+    let vc = 
+  }
+}
+
+
+extension ApplicationCoordinator: AppleMusicRequestManagerDelegate {
+  func requestManager(returned results: SearchResults) {
+    let vc = rootViewController.viewControllers.first as! MusicSearchViewController
+    vc.dataSource.results = results
+    vc.tableView.reloadData()
   }
 }

@@ -21,9 +21,11 @@
 		A12EBB5B1F43B45B00002ADE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB5A1F43B45B00002ADE /* ApplicationCoordinator.swift */; };
 		A12EBB5F1F43B59000002ADE /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB5E1F43B59000002ADE /* Coordinatable.swift */; };
 		A12EBB621F43B5D400002ADE /* MusicSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB611F43B5D400002ADE /* MusicSearchVC.swift */; };
-		A12EBB651F43B63400002ADE /* MusicSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB641F43B63400002ADE /* MusicSearchCell.swift */; };
-		A12EBB681F43B76D00002ADE /* MusicSearchTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB671F43B76D00002ADE /* MusicSearchTableViewDataSource.swift */; };
-		A12EBB6A1F43B87500002ADE /* MusicSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB691F43B87500002ADE /* MusicSearchViewModel.swift */; };
+		A12EBB651F43B63400002ADE /* ResultsMetaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB641F43B63400002ADE /* ResultsMetaTableViewCell.swift */; };
+		A12EBB6A1F43B87500002ADE /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB691F43B87500002ADE /* SearchResults.swift */; };
+		A12EBB6E1F43BFF900002ADE /* AppleMusicRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */; };
+		A12EBB701F43C42B00002ADE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12EBB6F1F43C42B00002ADE /* Alamofire.framework */; };
+		A12EBB721F43CCBF00002ADE /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +45,11 @@
 		A12EBB5A1F43B45B00002ADE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		A12EBB5E1F43B59000002ADE /* Coordinatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		A12EBB611F43B5D400002ADE /* MusicSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicSearchVC.swift; sourceTree = "<group>"; };
-		A12EBB641F43B63400002ADE /* MusicSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicSearchCell.swift; sourceTree = "<group>"; };
-		A12EBB671F43B76D00002ADE /* MusicSearchTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicSearchTableViewDataSource.swift; sourceTree = "<group>"; };
-		A12EBB691F43B87500002ADE /* MusicSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicSearchViewModel.swift; sourceTree = "<group>"; };
+		A12EBB641F43B63400002ADE /* ResultsMetaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsMetaTableViewCell.swift; sourceTree = "<group>"; };
+		A12EBB691F43B87500002ADE /* SearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleMusicRequestManager.swift; path = ../AppleMusicRequestManager.swift; sourceTree = "<group>"; };
+		A12EBB6F1F43C42B00002ADE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			files = (
 				A12EBB4C1F43B05600002ADE /* SVNBootstraper.framework in Frameworks */,
 				A12EBB4D1F43B05600002ADE /* SwiftEssentials.framework in Frameworks */,
+				A12EBB701F43C42B00002ADE /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +89,10 @@
 			children = (
 				A12EBB311F43AE3B00002ADE /* AppDelegate.swift */,
 				A12EBB451F43AEE900002ADE /* Model */,
+				A12EBB5C1F43B45F00002ADE /* ViewModel */,
 				A12EBB461F43AEED00002ADE /* View */,
 				A12EBB631F43B5D900002ADE /* ViewController */,
-				A12EBB5C1F43B45F00002ADE /* ViewModel */,
+				A12EBB5D1F43B47600002ADE /* Coordinators */,
 			);
 			path = "Hai iOS Engineer Challenge";
 			sourceTree = "<group>";
@@ -94,6 +100,9 @@
 		A12EBB451F43AEE900002ADE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB691F43B87500002ADE /* SearchResults.swift */,
+				A12EBB711F43CCBF00002ADE /* SearchResultsDataSource.swift */,
+				A12EBB6D1F43BFF900002ADE /* AppleMusicRequestManager.swift */,
 				A12EBB581F43B43A00002ADE /* Dependencies.swift */,
 			);
 			name = Model;
@@ -130,6 +139,7 @@
 		A12EBB491F43B05600002ADE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A12EBB6F1F43C42B00002ADE /* Alamofire.framework */,
 				A12EBB4A1F43B05600002ADE /* SVNBootstraper.framework */,
 				A12EBB4B1F43B05600002ADE /* SwiftEssentials.framework */,
 			);
@@ -152,9 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				A12EBB431F43AEE500002ADE /* Theme.swift */,
-				A12EBB5D1F43B47600002ADE /* Coordinators */,
-				A12EBB671F43B76D00002ADE /* MusicSearchTableViewDataSource.swift */,
-				A12EBB691F43B87500002ADE /* MusicSearchViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -187,7 +194,7 @@
 		A12EBB661F43B63700002ADE /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				A12EBB641F43B63400002ADE /* MusicSearchCell.swift */,
+				A12EBB641F43B63400002ADE /* ResultsMetaTableViewCell.swift */,
 			);
 			name = UITableViewCell;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SVNBootstraper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftEssentials.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -288,12 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12EBB721F43CCBF00002ADE /* SearchResultsDataSource.swift in Sources */,
 				A12EBB621F43B5D400002ADE /* MusicSearchVC.swift in Sources */,
 				A12EBB591F43B43A00002ADE /* Dependencies.swift in Sources */,
-				A12EBB651F43B63400002ADE /* MusicSearchCell.swift in Sources */,
+				A12EBB651F43B63400002ADE /* ResultsMetaTableViewCell.swift in Sources */,
 				A12EBB441F43AEE500002ADE /* Theme.swift in Sources */,
-				A12EBB6A1F43B87500002ADE /* MusicSearchViewModel.swift in Sources */,
-				A12EBB681F43B76D00002ADE /* MusicSearchTableViewDataSource.swift in Sources */,
+				A12EBB6E1F43BFF900002ADE /* AppleMusicRequestManager.swift in Sources */,
+				A12EBB6A1F43B87500002ADE /* SearchResults.swift in Sources */,
 				A12EBB5F1F43B59000002ADE /* Coordinatable.swift in Sources */,
 				A12EBB321F43AE3B00002ADE /* AppDelegate.swift in Sources */,
 				A12EBB5B1F43B45B00002ADE /* ApplicationCoordinator.swift in Sources */,
@@ -412,7 +421,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C4P8U7398K;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Hai iOS Engineer Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bikisDesign.Hai-iOS-Engineer-Challenge";
@@ -426,7 +438,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C4P8U7398K;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Hai iOS Engineer Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bikisDesign.Hai-iOS-Engineer-Challenge";
@@ -454,6 +469,7 @@
 				A12EBB421F43AE3B00002ADE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
