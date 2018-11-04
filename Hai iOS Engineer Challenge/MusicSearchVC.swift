@@ -41,7 +41,7 @@ final class MusicSearchViewController: CoordinatableViewController, KeyboardNoti
     tv.backgroundColor = Theme.Colors.secondaryBackground.color
     self.view.addSubview(tv)
     return tv
-  }()
+  }()  
   
   
   override func viewDidLoad() {

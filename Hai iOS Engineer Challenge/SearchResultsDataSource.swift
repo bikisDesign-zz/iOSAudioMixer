@@ -13,7 +13,7 @@ import UIKit
 class SearchResultsDataSource: NSObject, UITableViewDataSource {
   
   lazy var results: SearchResults = SearchResults()
-  
+  
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: ResultsMetaTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
